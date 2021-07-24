@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"programmers1/kthNumber"
+	kthNumber "programmers1/kthNumber"
 )
 
 func main(){
