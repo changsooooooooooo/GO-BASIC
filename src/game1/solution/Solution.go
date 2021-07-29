@@ -3,16 +3,13 @@ package solution
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
-type number struct {
-	randomInt int
-}
-
-func MakeRandom() number {
+func MakeRandom() int {
+	rand.Seed(time.Now().UnixNano())
 	randNumber := rand.Intn(100)
-	number := number{randNumber}
-	return number
+	return randNumber
 }
 
 func MakeNewInputValue() int {
@@ -21,12 +18,13 @@ func MakeNewInputValue() int {
 	return s
 }
 
-func CheckCorrect(count int, selNumber int, number number) int {
-	if selNumber == number.randomInt {
+func CheckCorrect(count int, selNumber int, number int) int {
+	fmt.Println(number)
+	if selNumber == number {
 		fmt.Printf("축하합니다. 숫자를 맞추셨습니다. 시도횟수: %d\n", count)
 		return count
 	}
-	if selNumber < number.randomInt {
+	if selNumber < number {
 		fmt.Println("입력하신 숫자가 더 작습니다.")
 		return count + 1
 	}

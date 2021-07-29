@@ -7,7 +7,6 @@ import (
 func main() {
 
 	number := sol.MakeRandom()
-
 	count := 1
 	sel := sol.MakeNewInputValue()
 	answer := sol.CheckCorrect(count, sel, number)
