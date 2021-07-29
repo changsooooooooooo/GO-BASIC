@@ -1,3 +1,3 @@
-module greedy/alg
+module pretest/alg
 
 go 1.16
