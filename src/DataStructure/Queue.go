@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+const M = 10
+
 type Queue struct {
 	queue *list.List
 }
@@ -27,6 +29,27 @@ func newQueue() *Queue {
 	//return Type = *List
 }
 
+func formMap() map[string]string {
+	m := make(map[string]string, 5)
+
+	m["1"] = "seoul"
+	m["2"] = "seoul"
+	m["3"] = "seoul"
+	m["4"] = "seoul"
+	m["5"] = "seoul"
+	m["6"] = "seoul"
+	m["7"] = "seoul"
+	m["8"] = "seoul"
+	m["9"] = "seoul"
+	m["0"] = "seoul"
+
+	return m
+}
+
+func formArr(arr [M]int) {
+	arr[2] = 10
+}
+
 func main() {
 	q := newQueue()
 
@@ -39,4 +62,5 @@ func main() {
 		fmt.Println(v)
 		v = q.pop()
 	}
+
 }
