@@ -7,7 +7,6 @@ func ChangeArrayValue(arr [5]int) [5]int {
 	return arr
 }
 
-
 func main(){
 
 	nums:=[...]int{10, 20, 30, 40, 50}
@@ -28,6 +27,16 @@ func main(){
 	}
 
 	fmt.Println()
+	temp := []float64{24.0, 25.9, 27.8, 26.9, 26.2}
+	temp_2 := []float64{24.0, 25.9, 27.8, 26.9, 26.2}
+
+	temp_2 = temp
+	temp_2[1] = 10
+
+	for _, v := range temp{
+		fmt.Println("temp : ", v)
+	}
+
 	t_2 = t
 	t_2[1] = 10.0
 	//복사를 해도 이 경우에 값이 안바뀐다...할당을 다르게 하고 메모리 주소는 복사 안하는게 팩트
